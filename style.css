@@ -17,8 +17,9 @@ body {
 #border {
     background-color: rgb(245, 245, 245);
     text-align: center;
-    height: 500px;
-    width: 100%;
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
 }
 
 #temperature {
