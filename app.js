@@ -32,7 +32,7 @@ function getWeather() {
             .then(data => {
                 console.log(data);
                 let temp = data.main.temp;
-                let toCelcius = (temp - 32) * 5 / 9;
+                let toCelcius = Math.round((temp - 32) * 5 / 9);
                 temperature.innerHTML = toCelcius + "° C";
                 location.innerHTML = data.name + "<br>";
                 description.innerHTML = data.weather[0].main;
