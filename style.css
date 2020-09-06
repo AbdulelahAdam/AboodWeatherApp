@@ -12,6 +12,7 @@ body {
 
 #description {
     font-size: 1.75em;
+    margin-top: -25px;
 }
 
 #border {
@@ -19,13 +20,12 @@ body {
     text-align: center;
     width: 80%;
     margin: 50px auto;
-    padding: 20px;
+    padding: 1px;
 }
 
 #temperature {
     font-size: 4.25em;
     text-align: center;
-    margin-bottom: -10px;
 }
 
 #date {
