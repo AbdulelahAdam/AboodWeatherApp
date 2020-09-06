@@ -2,11 +2,14 @@ function getWeather() {
     let temperature = document.getElementById("temperature");
     let description = document.getElementById("description");
     let location = document.getElementById("location");
+    let locationService = document.getElementById("allow-location-service");
 
     let api = "https://api.openweathermap.org/data/2.5/weather";
     let apiKey = "f146799a557e8ab658304c1b30cc3cfd";
 
-    location.innerHTML = "Locating...";
+    location.innerHTML = "Locating...<br>";
+    locationService.innerHTML = "Please click \"Allow\" so that this app finds your location and provide an accurate weather report";
+
 
     navigator.geolocation.getCurrentPosition(success, error);
 
@@ -36,6 +39,7 @@ function getWeather() {
                 temperature.innerHTML = toCelcius + "° C";
                 location.innerHTML = data.name + "<br>";
                 description.innerHTML = data.weather[0].main;
+                locationService.innerHTML = null;
                 getDate();
             });
 
