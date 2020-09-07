@@ -8,7 +8,7 @@ function getWeather() {
     let apiKey = "f146799a557e8ab658304c1b30cc3cfd";
 
     location.innerHTML = "Locating...<br>";
-    locationService.innerHTML = "Please click \"Allow\" so that this app finds your location and provide an accurate weather report";
+    locationService.innerHTML = "Please click \"Allow\" this app to find your location and provide an accurate weather report";
 
 
     navigator.geolocation.getCurrentPosition(success, error);
