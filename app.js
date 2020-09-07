@@ -1,5 +1,3 @@
-var firstTime = true;
-
 function getWeather() {
     let temperature = document.getElementById("temperature");
     let description = document.getElementById("description");
@@ -8,14 +6,8 @@ function getWeather() {
 
     let api = "https://api.openweathermap.org/data/2.5/weather";
     let apiKey = "f146799a557e8ab658304c1b30cc3cfd";
-    if (firstTime) {
-
-        location.innerHTML = "Locating...<br>";
-        locationService.innerHTML = "Please click \"Allow\" this app to find your location and provide an accurate weather report";
-        firstTime = false;
-    } else {
-        location.innerHTML = locationService.innerHTML = null;
-    }
+    location.innerHTML = "Locating...<br>";
+    locationService.innerHTML = "Please click \"Allow\" this app to find your location and provide an accurate weather report";
 
 
     navigator.geolocation.getCurrentPosition(success, error);
@@ -47,7 +39,7 @@ function getWeather() {
                 location.innerHTML = data.name + "<br>";
                 description.innerHTML = data.weather[0].main;
                 locationService.innerHTML = null;
-                setInterval(function() { getDate(); }, 1);
+                setInterval(function() { getDate(); }, 1000);
             });
 
     }
@@ -117,4 +109,4 @@ function getDate() {
 }
 
 
-setInterval(function() { getWeather(); }, 500);
+getWeather();
