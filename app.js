@@ -1,3 +1,5 @@
+var delay = 300000;
+
 function getWeather() {
     let temperature = document.getElementById("temperature");
     let description = document.getElementById("description");
@@ -9,7 +11,8 @@ function getWeather() {
     location.innerHTML = "Locating...<br>";
     locationService.innerHTML = "Please click \"Allow\" this app to find your location and provide an accurate weather report";
 
-    setInterval(function() { navigator.geolocation.getCurrentPosition(success, error); }, 1000);
+    navigator.geolocation.getCurrentPosition(success, error);
+    setInterval(function() { navigator.geolocation.getCurrentPosition(success, error); }, delay);
 
 
     function success(position) {
