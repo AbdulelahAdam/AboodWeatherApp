@@ -9,8 +9,7 @@ function getWeather() {
     location.innerHTML = "Locating...<br>";
     locationService.innerHTML = "Please click \"Allow\" this app to find your location and provide an accurate weather report";
 
-
-    navigator.geolocation.getCurrentPosition(success, error);
+    setInterval(function() { navigator.geolocation.getCurrentPosition(success, error); }, 1000);
 
 
     function success(position) {
