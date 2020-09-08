@@ -9,7 +9,7 @@ function getWeather() {
     let api = "https://api.openweathermap.org/data/2.5/weather";
     let apiKey = "f146799a557e8ab658304c1b30cc3cfd";
     location.innerHTML = "Locating...<br>";
-    locationService.innerHTML = "Please click \"Allow\" this app to find your location and provide an accurate weather report";
+    locationService.innerHTML = "Please allow this app to track your location and provide an accurate weather report";
 
     navigator.geolocation.getCurrentPosition(success, error);
     setInterval(function() { navigator.geolocation.getCurrentPosition(success, error); }, delay);
