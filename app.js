@@ -74,7 +74,7 @@ function getDate() {
     if (minute.toString().length == 1) {
         minute = '0' + minute;
     }
-    if (hour > "00" && hour < "12") {
+    if (hour >= "00" && hour < "12") {
         indicator = "AM";
     } else {
         indicator = "PM";
