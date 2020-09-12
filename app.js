@@ -88,7 +88,7 @@ function getDate() {
         hour -= 12;
     }
 
-    day = dayName[now.getDay() + 1];
+    day = dayName[now.getDay()];
     month = monthName[now.getMonth()];
     var monthDay = now.getDate();
     if (monthDay == "1" || monthDay == "21" || monthDay == "31") {
