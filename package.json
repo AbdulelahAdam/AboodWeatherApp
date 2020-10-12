@@ -1,0 +1,22 @@
+{
+    "name": "weather-app",
+    "version": "1.0.0",
+    "description": "A weather app",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AbdulelahAdam/Abood-Weather-App.git"
+    },
+    "author": "Abdulelah Adam",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/AbdulelahAdam/Abood-Weather-App/issues"
+    },
+    "homepage": "https://github.com/AbdulelahAdam/Abood-Weather-App#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
